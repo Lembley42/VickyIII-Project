@@ -6,12 +6,4 @@ public class ProvinceList : MonoBehaviour {
 
 	public List <GameObject> allProvinces;
 
-	void Start () 
-	{
-	
-	}
-	
-	void Update () {
-	
-	}
 }

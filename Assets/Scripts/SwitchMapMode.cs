@@ -4,16 +4,13 @@ using System.Collections;
 public class SwitchMapMode : MonoBehaviour {
 
 	public GameObject world;
-    public string mapMode;
 
-	public void SwitchColors()
+	public void SwitchToPoliticalMapMode()
 	{
-        
-       
-            foreach (GameObject curr in world.GetComponent<ProvinceList>().allProvinces)
-            {
-                curr.GetComponent<SpriteRenderer>().color = curr.GetComponent<ProvinceData>().owner.GetComponent<NationData>().nationColor;
-            }
+       foreach (GameObject curr in world.GetComponent<ProvinceList>().allProvinces)
+       {
+       	    curr.GetComponent<SpriteRenderer>().color = curr.GetComponent<ProvinceData>().owner.GetComponent<NationData>().nationColor;
+       }
 	}
 
     public void SwitchToTerrainMapMode()

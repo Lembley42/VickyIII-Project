@@ -15,8 +15,7 @@ public class ProvinceData : MonoBehaviour {
     public float warValue;
 	public Sprite withoutBorders;
 	public Sprite withBorders;
-    public float supplyLimit;
-
+	public float supplyLimit = 6f;
     void Start () 
 	{
 		provinceName = transform.name;
@@ -26,7 +25,7 @@ public class ProvinceData : MonoBehaviour {
 			GetComponent<SpriteRenderer>().color = owner.GetComponent<NationData>().nationColor;
 
 		}
-        terrain.GetComponent<TerrainData>().accessTerrainData();
+		terrain.GetComponent<TerrainData>().AccessTerrainData(gameObject);
     } 
 	
 	void Update () {
