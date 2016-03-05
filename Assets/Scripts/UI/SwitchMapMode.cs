@@ -25,7 +25,7 @@ public class SwitchMapMode : MonoBehaviour {
     {
         foreach (GameObject curr in world.GetComponent<ProvinceList>().allProvinces)
         {
-            curr.GetComponent<SpriteRenderer>().color = new Vector4(0,Mathf.Round(curr.GetComponent<ProvinceData>().supplyLimit),0,255);
+            curr.GetComponent<SpriteRenderer>().color = new Vector4(0,curr.GetComponent<ProvinceData>().supplyLimit,0,255);
         }
     }
 }
