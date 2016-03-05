@@ -16,8 +16,4 @@ public class OnClick : MonoBehaviour {
 		provincePanel.GetComponent<DisplayInformation>().UpdateProvince(gameObject);
 	}
 
-    public void closePanel()
-    {
-        provincePanel.SetActive(false);
-    }
 }
