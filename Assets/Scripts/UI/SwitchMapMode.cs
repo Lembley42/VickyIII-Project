@@ -28,4 +28,12 @@ public class SwitchMapMode : MonoBehaviour {
             curr.GetComponent<SpriteRenderer>().color = new Vector4(0,Mathf.Round(curr.GetComponent<ProvinceData>().supplyLimit),0,255);
         }
     }
+
+    public void SwitchToRGOMapMode()
+    {
+        foreach (GameObject curr in world.GetComponent<ProvinceList>().allProvinces)
+        {
+            //curr.GetComponent<SpriteRenderer>().color = 
+        }
+    }
 }
