@@ -20,6 +20,7 @@ public class OnClick : MonoBehaviour {
 		provincePanel.GetComponent<DisplayInformation>().UpdateProvince(gameObject);
         GetComponent<ProvinceData>().isSelected = !GetComponent<ProvinceData>().isSelected;
 
+<<<<<<< HEAD
         if(GetComponent<ProvinceData>().isSelected == true)
         {
             prevColor = GetComponent<SpriteRenderer>().color;
@@ -31,4 +32,6 @@ public class OnClick : MonoBehaviour {
         }
     }
 
+=======
+>>>>>>> origin/master
 }
