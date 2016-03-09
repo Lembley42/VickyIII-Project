@@ -26,8 +26,8 @@ public class SwitchMapMode : MonoBehaviour {
     {
         foreach (GameObject curr in world.GetComponent<ProvinceList>().allProvinces)
         {
-<<<<<<< HEAD
-            curr.GetComponent<SpriteRenderer>().color = new Color(0,Mathf.Round(curr.GetComponent<ProvinceData>().supplyLimit),0,255);
+
+            curr.GetComponent<SpriteRenderer>().color = new Color(0,curr.GetComponent<ProvinceData>().supplyLimit,0,255);
         }
     }
 
@@ -53,9 +53,9 @@ public class SwitchMapMode : MonoBehaviour {
                 //Set its color to gray
                 curr.GetComponent<SpriteRenderer>().color = new Color(50, 50, 50, 255);
             }
-=======
-            curr.GetComponent<SpriteRenderer>().color = new Vector4(0,curr.GetComponent<ProvinceData>().supplyLimit,0,255);
->>>>>>> origin/master
+
+            //Why_is_this_even_here_curr.GetComponent<SpriteRenderer>().color = new Vector4(0,curr.GetComponent<ProvinceData>().supplyLimit,0,255);
+
         }
     }
 }

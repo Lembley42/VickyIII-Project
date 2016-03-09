@@ -7,7 +7,7 @@ public class ProvinceData : MonoBehaviour {
     public string provinceName;
     public bool isCapital;
     public GameObject owner;
-    public GameObject controller;
+    public GameObject controller; //How will we color this?
     public List<GameObject> cores;
     public GameObject terrain;
     public GameObject climate;

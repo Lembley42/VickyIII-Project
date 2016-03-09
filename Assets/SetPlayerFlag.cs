@@ -11,6 +11,7 @@ public class SetPlayerFlag : MonoBehaviour {
 	void Start () {
         sourceFlag.GetComponent<Image>().sprite = player.GetComponent<NationData>().flag;
         playerName.text = player.GetComponent<NationData>().nationName;
+        
 	}
 	
 }

@@ -18,20 +18,26 @@ public class OnClick : MonoBehaviour {
 	{
 		provincePanel.SetActive(true);
 		provincePanel.GetComponent<DisplayInformation>().UpdateProvince(gameObject);
-        GetComponent<ProvinceData>().isSelected = !GetComponent<ProvinceData>().isSelected;
-
-<<<<<<< HEAD
-        if(GetComponent<ProvinceData>().isSelected == true)
+        foreach (GameObject curr in world.GetComponent<ProvinceList>().allProvinces)
         {
-            prevColor = GetComponent<SpriteRenderer>().color;
-            GetComponent<SpriteRenderer>().color = new Color(255,255,255,10);
+            curr.GetComponent<ProvinceData>().isSelected = false;
+        }
+        GetComponent<ProvinceData>().isSelected = !GetComponent<ProvinceData>().isSelected;
+    }
+
+    void Update()
+    {
+        if (GetComponent<ProvinceData>().isSelected == true)
+        {
+            GetComponent<SpriteRenderer>().color += new Color(10, 10, 10, 0);
         }
         else
         {
-            GetComponent<SpriteRenderer>().color = prevColor;
+            prevColor = GetComponent<SpriteRenderer>().color;
+            GetComponent<SpriteRenderer>().color = GetComponent<SpriteRenderer>().color = prevColor;
+
         }
     }
 
-=======
->>>>>>> origin/master
+
 }
