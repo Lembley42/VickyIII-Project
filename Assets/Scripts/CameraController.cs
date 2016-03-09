@@ -32,13 +32,21 @@ public class CameraController : MonoBehaviour {
 			foreach(GameObject currProv in provList.allProvinces)
 			{
 				currProv.GetComponent<SpriteRenderer>().sprite = currProv.GetComponent<ProvinceData>().withBorders;
-			}
+                if (currProv.GetComponent<ProvinceData>().isCapital == true)
+                {
+                    currProv.GetComponent<ProvinceData>().owner.GetComponent<NationData>().capital.SetActive(true);
+                }
+            }
 		}
 		else
 		{
 			foreach(GameObject currProv in provList.allProvinces)
 			{
 				currProv.GetComponent<SpriteRenderer>().sprite = currProv.GetComponent<ProvinceData>().withoutBorders;
+                if(currProv.GetComponent<ProvinceData>().isCapital == true)
+                {
+                    currProv.GetComponent<ProvinceData>().owner.GetComponent<NationData>().capital.SetActive(false);
+                }
 			}
 		}
 	}

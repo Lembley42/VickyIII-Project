@@ -16,6 +16,7 @@ public class ProvinceData : MonoBehaviour {
 	public Sprite withoutBorders;
 	public Sprite withBorders;
 	public float supplyLimit = 6f;
+    public bool isSelected;
     void Start () 
 	{
 		provinceName = transform.name;
@@ -26,6 +27,11 @@ public class ProvinceData : MonoBehaviour {
 
 		}
 		terrain.GetComponent<TerrainData>().AccessTerrainData(gameObject);
+
+        if (isCapital == true)
+        {
+            Instantiate(owner.GetComponent<NationData>().capital, transform.position, Quaternion.identity);
+        }
     } 
 	
 	void Update () {

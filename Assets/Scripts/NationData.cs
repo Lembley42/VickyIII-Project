@@ -7,6 +7,7 @@ public class NationData : MonoBehaviour {
 	public string nationName;
 	public Color nationColor;
     public Sprite flag;
+    public GameObject capital;
 
 
 

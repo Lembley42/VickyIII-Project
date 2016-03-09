@@ -5,19 +5,30 @@ using System.Collections;
 public class OnClick : MonoBehaviour {
 
 	public GameObject provincePanel;
+    public Color prevColor;
+    public GameObject world;
 
-	void Start()
+
+    void Start()
 	{
-	}
+        //world = GameObject.Find("world");
+    }
 
 	void OnMouseDown()
 	{
 		provincePanel.SetActive(true);
 		provincePanel.GetComponent<DisplayInformation>().UpdateProvince(gameObject);
-	}
+        GetComponent<ProvinceData>().isSelected = !GetComponent<ProvinceData>().isSelected;
 
-    public void closePanel()
-    {
-        provincePanel.SetActive(false);
+        if(GetComponent<ProvinceData>().isSelected == true)
+        {
+            prevColor = GetComponent<SpriteRenderer>().color;
+            GetComponent<SpriteRenderer>().color = new Color(255,255,255,10);
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = prevColor;
+        }
     }
+
 }
