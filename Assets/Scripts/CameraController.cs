@@ -34,6 +34,7 @@ public class CameraController : MonoBehaviour {
 				currProv.GetComponent<SpriteRenderer>().sprite = currProv.GetComponent<ProvinceData>().withBorders;
                 if (currProv.GetComponent<ProvinceData>().isCapital == true)
                 {
+                    //Enable the capital icon.
                     currProv.GetComponent<ProvinceData>().owner.GetComponent<NationData>().capital.SetActive(true);
                 }
             }
@@ -45,6 +46,7 @@ public class CameraController : MonoBehaviour {
 				currProv.GetComponent<SpriteRenderer>().sprite = currProv.GetComponent<ProvinceData>().withoutBorders;
                 if(currProv.GetComponent<ProvinceData>().isCapital == true)
                 {
+                    //Disable the capital icon
                     currProv.GetComponent<ProvinceData>().owner.GetComponent<NationData>().capital.SetActive(false);
                 }
 			}
